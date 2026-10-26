@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "sfc-webservice": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/sfc-webservice-mcp/src/index.js"],
+      "env": {
+        "SFC_APP_KEY": "replace-me",
+        "SFC_TOKEN": "replace-me",
+        "SFC_USER_ID": "replace-me",
+        "SFC_DIVISION_ID": "1"
+      }
+    }
+  }
+}

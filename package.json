@@ -1,0 +1,44 @@
+{
+  "name": "@sfc/webservice-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for SFC customer WebService: rates, orders, labels, tracking.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuntekCorps-xLab/sfc-webservice-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SuntekCorps-xLab/sfc-webservice-mcp/issues"
+  },
+  "homepage": "https://github.com/SuntekCorps-xLab/sfc-webservice-mcp#readme",
+  "bin": {
+    "sfc-webservice-mcp": "./src/index.js"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "README.zh-CN.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js && node --check src/config.js && node --check src/client/http.js && node --check src/client/track.js && node --check src/client/soap.js && node --check src/tools/register.js && node --check src/redact.js",
+    "test": "node --test test/*.test.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
+  },
+  "keywords": [
+    "mcp",
+    "sfc",
+    "shipping",
+    "webservice"
+  ]
+}
